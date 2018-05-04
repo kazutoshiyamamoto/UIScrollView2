@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     // スクロールビュー
     @IBOutlet weak var myScrollView: UIScrollView!
@@ -16,11 +16,8 @@ class ViewController: UIViewController {
     // スクロールビューのサブビュー
     @IBOutlet weak var contentView: UIView!
     
-    
+    // 全てのテキストフィールドの配列
     @IBOutlet var myTextFields: [UITextField]!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +29,12 @@ class ViewController: UIViewController {
         // コンテンツのサイズを指定する
         let contentRect = contentView.bounds
         myScrollView.contentSize = CGSize(width: contentRect.width, height: contentRect.height)
+        
+        // 全てのテキストフィールドのデリゲートになる
+        for fld in myTextFields {
+            fld.delegate = self
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
