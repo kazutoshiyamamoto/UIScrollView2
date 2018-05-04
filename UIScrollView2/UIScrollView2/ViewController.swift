@@ -49,6 +49,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
             fld.delegate = self
         }
         
+        // デフォルトの通知センターを得る
+        let notification = NotificationCenter.default
+        // キーボードのframeが変化した
+        notification.addObserver(self, selector: #selector(ViewController.keyboardChangeFrame(_:)), name: NSNotification.Name.UIKeyboardDidChangeFrame, object: nil)
+        // キーボードが登場した
+        notification.addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        // キーボードが退場した
+        notification.addObserver(self, selector: #selector(ViewController.keyboardDidHide(_:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
