@@ -19,6 +19,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // 全てのテキストフィールドの配列
     @IBOutlet var myTextFields: [UITextField]!
     
+    // 編集中のテキストフィールド
+    var editingField:UITextField?
+    
+    // 編集開始
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // 編集中のテキストフィールド
+        editingField = textField
+    }
+    
+    // 編集終了
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        editingField = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
