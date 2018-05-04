@@ -109,6 +109,11 @@
                     <connections>
                         <outlet property="contentView" destination="6Z7-j4-leN" id="jaL-0K-4ku"/>
                         <outlet property="myScrollView" destination="p6i-tV-ZFG" id="Qo3-Kd-Dfl"/>
+                        <outletCollection property="myTextFields" destination="1mA-rp-JSg" collectionClass="NSMutableArray" id="IZd-ED-BoH"/>
+                        <outletCollection property="myTextFields" destination="QKk-Nf-eBw" collectionClass="NSMutableArray" id="Ae2-6N-u7O"/>
+                        <outletCollection property="myTextFields" destination="M0C-si-eEt" collectionClass="NSMutableArray" id="rD1-Pc-xvl"/>
+                        <outletCollection property="myTextFields" destination="B5f-qa-mlu" collectionClass="NSMutableArray" id="vMw-uj-E5k"/>
+                        <outletCollection property="myTextFields" destination="BLQ-qo-gGb" collectionClass="NSMutableArray" id="L1c-L0-hwb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
